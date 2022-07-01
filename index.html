@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>CV Romain FRATANI</title>
+        <link href = "style.css" rel = "stylesheet">
+        <link rel = "icon" href = "icon.png">
+        <meta charset = "utf-8">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <nav>
+        <ul>
+            <li><a href = "index.html"> Acceuil </a></li><!--
+            --><li><a href = "formation.html"> Formations </a></li><!--
+            --><li><a href = "parcourt_professionnel.html"> Parcours professionnel </a></li><!--
+            --><li><a href = "comp.html"> Mes compétances </a></li>
+
+        </ul>
+        </nav>
+        <hr width = "75%" size="10" color="black">
+        <h1>CV Romain FRATANI</h1>
+        <hr width = "75%" size="10" color="black">
+        <div id="slider">
+            <img src="20201206_170322.jpg" alt="" id="slide">
+            <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+            <div id="suivant" onclick="ChangeSlide(1)">></div>
+        </div>
+            
+        <h2>Bachelor Info Tech.</h2>
+
+<?php
+
+$user = 'root';
+$pass = 'root';
+
+try {
+    $db = new PDO ('mysql:host=localhost;dbname=stock, $user, $pass');
+    foreach ($db->query('SELECT * FROM produits') as $row)
+    {
+        print_r($row);
+    }
+} 
+catch (PDOxception$e) 
+{
+    print "erreur :" . $e->getMessage() . "br/";
+    die;
+}
+            
+            
+        <p><FONT size = "4">Passionné de handball mais surtout du numérique, je souhaiterais en faire mon métier, c'est pour cela que je viens vers vous aujourd'hui,</br> afin d'intégrer votre formation <strong>Bachelor Info Tech.</strong></FONT></p>
+        <p><FONT size = "4">Je suis <strong>volontaire, souriant, déterminé et dynamique</strong>, </br>et j'aime développer des sites web, et des bots discord à mes heures perdues. Convaincu de mettre tout en oeuvre afin de réussir dans cette voie.</FONT></p>
+<p><FONT size = "4">Vous trouverez dans un premier temps, mes différentes <a href = "formation.html">formations</a> au cours de ma scolarité.</br> Suivi de mon <a href = "parcourt_professionnel.html">parcours professionnel</a> <br>Pour finir par mes <a href = "comp.html">compétences</a></FONT></p>
+        <hr width = "75%" size="10" color="black">
+        <p>N'hésitez pas à me contacter soit :</br><strong>Par téléphone :</strong> 06.17.50.63.61</br><strong>Par mail :</strong> romain.fratani@gmail.com</br>Mobilité possible</p>
+
+    </body>
+
+
+</html>

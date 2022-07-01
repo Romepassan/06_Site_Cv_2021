@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cours PHP / MySQL</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="cours.css">
+    </head>
+    <body>
+        <h1>Bases de données MySQL</h1>  
+        <?php
+            $user = 'root';
+            $pass = '';
+        
+            try {
+                $db = new PDO ('mysql:host=localhost;dbname=stock, $user, $pass');
+                foreach ($db->query('SELECT * FROM produits') as $row)
+                {
+                    print_r($row);
+                }
+            } 
+            catch (PDOxception$e) 
+            {
+                print "erreur :" . $e->getMessage() . "br/";
+                die;
+            ?>
+    </body>
+</html>
